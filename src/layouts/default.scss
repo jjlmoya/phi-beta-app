@@ -1,0 +1,51 @@
+$l-layout-sidebar: 150px;
+
+.l-default {
+  background-color: #e5dec2;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+
+  &__main {
+    //grid-template-columns: 150px 1fr;
+    min-height: calc(100vh - 40px);
+    transition: all 1s ease-in;
+    transition: 2s;
+    grid-template-columns: 1px 1fr;
+  }
+
+  &__menu {
+    opacity: 0;
+  }
+
+  &__menu,
+  &__content {
+    height: 100%;
+  }
+
+  &__toggle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+  }
+
+  &.is-active {
+    .l-default__main {
+      transition: all 1s ease-in;
+      transition: 2s;
+      grid-template-columns: 150px 1fr;
+    }
+
+    .l-default__menu {
+      transition: all 1s ease-in;
+      opacity: 1;
+    }
+
+    .l-default__toggle {
+      &::after {
+        transform: rotateZ(180deg);
+      }
+    }
+  }
+}
