@@ -6,41 +6,41 @@ export default {
   success: 'Action was successful',
   month: {
 
-    jan: 'JAN',
-    january: 'January',
+    jan: 'ENE',
+    january: 'Enero',
 
     feb: 'FEB',
-    febraury: 'Febraury',
+    febraury: 'Febrero',
 
     mar: 'MAR',
-    march: 'March',
+    march: 'Marzo',
 
     apr: 'ABR',
-    april: 'April',
+    april: 'Abril',
 
     may: 'MAY',
-    mayName: 'May',
+    mayName: 'Mayo',
 
     jun: 'JUN',
-    june: 'June',
+    june: 'Junio',
 
     jul: 'JUL',
-    july: 'July',
+    july: 'Julio',
 
-    aug: 'AUG',
-    august: 'August',
+    aug: 'AGO',
+    august: 'Agosto',
 
     sept: 'SEPT',
-    september: 'September',
+    september: 'Septiembre',
 
     oct: 'OCT',
-    october: 'October',
+    october: 'Octubre',
 
     nov: 'NOV',
-    november: 'November',
+    november: 'Noviembre',
 
     dec: 'DEC',
-    december: 'December'
+    december: 'Diciembre'
 
   }
 }

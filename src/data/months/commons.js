@@ -1,85 +1,98 @@
+import { i18n } from '../../boot/i18n'
 export default {
   JANUARY: (TYPE) => {
     return {
       id: 'JAN',
-      name: 'Enero',
+      shortName: i18n.t('month.jan'),
+      name: i18n.t('month.january'),
       ...TYPE
     }
   },
   FEBRUARY: (TYPE) => {
     return {
       id: 'FEB',
-      name: 'Febrero',
+      shortName: i18n.t('month.feb'),
+      name: i18n.t('month.febraury'),
       ...TYPE
     }
   },
   MARCH: (TYPE) => {
     return {
       id: 'MAR',
-      name: 'Marzo',
+      shortName: i18n.t('month.mar'),
+      name: i18n.t('month.march'),
       ...TYPE
     }
   },
   APRIL: (TYPE) => {
     return {
       id: 'APR',
-      name: 'Abril',
+      shortName: i18n.t('month.apr'),
+      name: i18n.t('month.april'),
       ...TYPE
     }
   },
   MAY: (TYPE) => {
     return {
       id: 'MAY',
-      name: 'Mayo',
+      shortName: i18n.t('month.may'),
+      name: i18n.t('month.mayName'),
       ...TYPE
     }
   },
   JUNE: (TYPE) => {
     return {
       id: 'JUN',
-      name: 'Junio',
+      shortName: i18n.t('month.jun'),
+      name: i18n.t('month.june'),
       ...TYPE
     }
   },
   JULY: (TYPE) => {
     return {
       id: 'JUL',
-      name: 'Julio',
+      shortName: i18n.t('month.jul'),
+      name: i18n.t('month.july'),
       ...TYPE
     }
   },
   AUGUST: (TYPE) => {
     return {
       id: 'AUG',
-      name: 'Agosto',
+      shortName: i18n.t('month.aug'),
+      name: i18n.t('month.august'),
       ...TYPE
     }
   },
   SEPTEMBER: (TYPE) => {
     return {
       id: 'SEP',
-      name: 'Septiembre',
+      shortName: i18n.t('month.sept'),
+      name: i18n.t('month.september'),
       ...TYPE
     }
   },
   OCTOBER: (TYPE) => {
     return {
       id: 'OCT',
-      name: 'Octubre',
+      shortName: i18n.t('month.oct'),
+      name: i18n.t('month.october'),
       ...TYPE
     }
   },
   NOVEMBER: (TYPE) => {
     return {
       id: 'NOV',
-      name: 'Noviembre',
+      shortName: i18n.t('month.nov'),
+      name: i18n.t('month.november'),
       ...TYPE
     }
   },
   DECEMBER: (TYPE) => {
     return {
       id: 'DEC',
-      name: 'December',
+      shortName: i18n.t('month.dec'),
+      name: i18n.t('month.december'),
       ...TYPE
     }
   }
