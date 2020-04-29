@@ -3,16 +3,15 @@
         <div class="card__name">
             {{ name }}
         </div>
-        <div class="card__corner">
-          <img :src="`${assets}${owned ? 'star-full' : 'star-empty'}.png`" @click="toggleOwned(image)"/>
-        </div>
+        <img class="card__corner" :src="`${assets}${owned ? 'star-full' : 'star-empty'}.png`" @click="toggleOwned(image)"/>
         <img class="card__image" :src="`${assets}/assets/${image}`">
         <div class="card__months">
-            <div v-for="month in commonMonths" :key="month.id" class="month__wrap" :class="getMonthState(month.id)">
-                <!--<img class="month__image" :alt="month.name" :src="`${assets}/crafting/${month.image}`">-->
+          <div  v-for="(month, index) in commonMonths" :key="month.id">
+            <div class="month__wrap" :class="getMonthState(month.id, index)">
                 <i></i>
                 <span>{{ month.id }}</span>
             </div>
+          </div>
         </div>
         <div class="card__info">
             <a :href="`${domain}${pathname}`" target="_blank">
@@ -24,6 +23,8 @@
             </svg>
           </a>
         </div>
+        <div class="card__season">{{season.name}}</div>
+
     </div>
 </template>
 
@@ -57,6 +58,14 @@ export default {
       default: 'https://plantasyflores.online'
     },
     pathname: {
+      type: String,
+      default: ''
+    },
+    monthIndex: {
+      type: Number,
+      default: new Date().getMonth()
+    },
+    season: {
       type: String,
       default: ''
     }
@@ -107,9 +116,10 @@ export default {
       localStorage.owned = JSON.stringify(globalOwned)
       this.$emit('updateOwneds', count)
     },
-    getMonthState (activeMonth) {
+    getMonthState (activeMonth, index) {
       const match = this.months.find(month => month.id === activeMonth)
-      return match ? match.type : ''
+      const isActive = this.monthIndex === index ? 'is-active' : ''
+      return `${(match ? match.type : '')} ${isActive}`
     }
   }
 }

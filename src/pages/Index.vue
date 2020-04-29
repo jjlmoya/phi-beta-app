@@ -16,7 +16,7 @@
               <input class="crafting-search__searcher" type="text"  @keyup="onSearch" :v-model="search" placeholder="¿Qué buscas?">
             </form>
             <div class="crafting-counter">
-              <span class="crafting-counter__owned">{{this.owneds}}</span>/<span class="crafting-counter__current">{{this.current}}</span>
+              <span class="crafting-counter__owned">{{this.owneds}}</span> de <span class="crafting-counter__current">{{this.current}}</span>
             </div>
             <div class="crafting-result">
                 <Card @updateOwneds="updateOwneds"
@@ -27,6 +27,7 @@
                     :months="craft.months"
                     :pathname="craft.pathname"
                     :owneds="owneds"
+                    :season="craft.season"
                 />
                 <div @click="expendLimits" class="craft-card craft-card__see-more" v-if="crafts.length > limit">
                   <span class="text">Ver todos</span>
@@ -41,7 +42,7 @@
 </template>
 
 <style lang="scss">
-  @import 'crafting.scss';
+  @import 'index.scss';
 </style>
 
 <script>

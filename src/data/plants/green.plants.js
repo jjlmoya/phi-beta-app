@@ -1,12 +1,11 @@
 import MONTHS from '../month.data'
 import CATEGORY from '../category.data'
-import TYPE from '../type.data'
 import SEASON from '../season.data'
-
+import TYPE from '../type.data'
 export default [
   {
-    name: 'Tomates',
-    image: 'tomato.jpg',
+    name: 'Albahaca',
+    image: 'albahaca.jpg',
     height: 1,
     width: 1,
     season: SEASON.ANNUAL,
@@ -14,9 +13,9 @@ export default [
     months: [
       MONTHS.MARCH(TYPE.PLANT),
       MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      MONTHS.MAY(TYPE.PLANT),
+      MONTHS.AUGUST(TYPE.FLOWER)
     ],
-    pathname: '/tomate/'
+    pathname: '/albahaca/'
   }
 ]

@@ -1,71 +1,41 @@
-$primary-card-color: #fea474;
+@import "../../css/quasar.variables.scss";
+
 .card {
   animation: fade-in-animation 0.8s;
   position: relative;
   background-color: white;
   width: 170px;
-  border: 5px solid $primary-card-color;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
+  box-shadow: $shadow;
   padding: 5px;
-  font-size: 12px;
-  word-spacing: -1px;
-  letter-spacing: 0;
-  color: #845a24;
+  color: $text;
+  font-weight: bold;
+  padding-bottom: 40px;
   &__name {
-    font-weight: bold;
     max-width: 80%;
-    line-height: 12px;
-    padding: 5px;
+    line-height: 22px;
+    font-size: 26px;
+    padding: 0 5px;
   }
   &__corner {
     right: 0;
     top: 0;
-    width: 40px;
-    height: 40px;
-    border-width: 0 40px 40px 0;
-    border-color: $primary-card-color $primary-card-color #cbc9b5 $primary-card-color;
+    width: 25px;
     position: absolute;
-    border-style: solid;
-    img {
-      width: 25px;
-      position: absolute;
-      left: 18px;
-      top: -3px;
-    }
+    right: 1px;
+    top: 2px;
   }
 
-  &__see-more {
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .text {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100px;
-      height: 100px;
-      background-color: black;
-      border-radius: 50%;
-      color: #845a25;
-      background-color: #f5f7e1;
-      font-size: 16px;
-      font-weight: bold;
-    }
-  }
   &__image {
-    padding: 5px;
-    width: 100%;
+    padding: 5px 0;
+    width: calc(100% + 10px);
+    margin: 0 -4px 0 -5px;
   }
 
   &__months {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
     font-size: 14px;
-    font-weight: bold;
-    align-items: center;
-    justify-content: center;
     column-gap: 5px;
   }
 
@@ -73,6 +43,10 @@ $primary-card-color: #fea474;
     text-align: right;
     margin-top: 8px;
     font-size: 12px;
+    position: absolute;
+    right: 5px;
+    bottom: 3px;
+    display: flex;
     cursor: pointer;
     svg {
       height: 20px;
@@ -83,35 +57,55 @@ $primary-card-color: #fea474;
       border-radius: 5px;
       fill: white;
     }
-
+  }
+  &__season {
+    position: absolute;
+    bottom: 0;
+    font-size: 24px;
   }
   .month__wrap {
+    padding-top: 5px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 1px dotted $primary;
+    opacity: 0.3;
+    background-color: $info;
+    font-family: Georgia, Arial, sans-serif;
+    letter-spacing: -1px;
+
     i {
       background-size: cover;
       display: block;
       width: 16px;
       height: 16px;
     }
+    &.is-active {
+      border: 1px solid $secondary;
+      background-color: $accent;
+      box-shadow: $shadow;
+      opacity: 1;
+    }
+    &.fruit, &.plant, &.flower {
+      opacity: 1;
+    }
     &.fruit {
       i {
         background-image: url('/statics/assets/fruit.png')
       }
-      color: red;
+      color: $collect;
     }
 
     &.plant {
-      color: green;
+      color: $plant;
       i {
         background-image: url('/statics/assets/seed.png')
       }
     }
 
     &.flower {
-      color: orange;
+      color:$flower;
       i {
         background-image: url('/statics/assets/flower.png')
       }

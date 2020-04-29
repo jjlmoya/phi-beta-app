@@ -1,6 +1,10 @@
 import FRUIT from './plants/fruit.plants'
+import GREEN from './plants/green.plants'
+
 const PLANTS = [
-  ...FRUIT
+  ...FRUIT,
+  ...GREEN
+
 ]
 
 export default PLANTS

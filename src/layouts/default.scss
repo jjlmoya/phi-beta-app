@@ -1,13 +1,14 @@
+@import "../css/quasar.variables.scss";
+
 $l-layout-sidebar: 150px;
 
 .l-default {
-  background-color: #e5dec2;
+  background-color: $primary;
   position: relative;
   overflow: hidden;
   min-height: 100vh;
 
   &__main {
-    //grid-template-columns: 150px 1fr;
     min-height: calc(100vh - 40px);
     transition: all 1s ease-in;
     transition: 2s;

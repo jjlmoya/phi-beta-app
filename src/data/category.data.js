@@ -1,5 +1,5 @@
-import CLOTH from './categories/cloth.category'
+import SEASON from './categories/common.season'
 
 export default {
-  ...CLOTH
+  ...SEASON
 }

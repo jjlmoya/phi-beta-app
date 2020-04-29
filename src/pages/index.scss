@@ -1,6 +1,6 @@
 .crafting-result {
   display: grid;
-  grid-gap: 5px;
+  grid-gap: 10px;
   justify-content: center;
   grid-template-columns: repeat(auto-fill, minmax(170px, max-content));
   padding: 5px;
@@ -20,7 +20,6 @@
       text-decoration: underline;
     }
   }
-
 }
 
 .crafting-search {
@@ -64,11 +63,12 @@
   font-weight: bold;
   padding: 0 20px;
   text-align: right;
-  color: #bcb8a4;
+  color: white;
+  font-size: 20px;
   &__current {
-    color: #f29900;
+    font-weight: bold;
   }
   &__owned {
-    color: green;
+    color: white;
   }
 }
