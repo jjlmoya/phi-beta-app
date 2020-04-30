@@ -2,8 +2,10 @@
 // so you can safely delete all default props below
 
 export default {
-  tomato: 'Tomate',
-  success: 'Action was successful',
+  plants: {
+    basil: 'Basil',
+    tomato: 'Tomato'
+  },
   month: {
 
     jan: 'JAN',

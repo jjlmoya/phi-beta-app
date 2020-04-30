@@ -1,5 +1,7 @@
-import SEASON from './categories/common.season'
+import SEASON from './categories/season.categories'
+import TYPE from './categories/types.categories'
 
 export default {
-  ...SEASON
+  ...SEASON,
+  ...TYPE
 }

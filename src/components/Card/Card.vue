@@ -24,7 +24,6 @@
           </a>
         </div>
         <div class="card__season">{{season.name}}</div>
-
     </div>
 </template>
 
@@ -66,8 +65,8 @@ export default {
       default: new Date().getMonth()
     },
     season: {
-      type: String,
-      default: ''
+      type: Object,
+      default: () => {}
     }
   },
   data () {
