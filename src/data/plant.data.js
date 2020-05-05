@@ -8,10 +8,10 @@ const PLANTS = [
   ...GREEN,
   ...TUBER,
   ...FLOWER
-
 ]
 
-export default PLANTS
+console.log(PLANTS)
+export default GREEN
 
 /**
 

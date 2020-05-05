@@ -111,10 +111,10 @@ module.exports = function (/* ctx */) {
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
       workboxOptions: {}, // only for GenerateSW
       manifest: {
-        name: 'DIY Nook',
+        name: 'Calendario de Plantación',
 
-        short_name: 'DIY Nook',
-        description: 'Lista dinámica e interactiva de DIY del juego Animal Crossing New Horizons',
+        short_name: 'Calendario de Plantación',
+        description: 'Calendario de Plantación',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#e5dec2',
@@ -147,7 +147,7 @@ module.exports = function (/* ctx */) {
     // Full list of options: https://quasar.dev/quasar-cli/developing-cordova-apps/configuring-cordova
     cordova: {
       // noIosLegacyBuildFlag: true, // uncomment only if you know what you are doing
-      id: 'es.jjlmoya.games.ac'
+      id: 'es.jjlmoya.irl'
     },
 
     // Full list of options: https://quasar.dev/quasar-cli/developing-capacitor-apps/configuring-capacitor
@@ -174,7 +174,7 @@ module.exports = function (/* ctx */) {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: 'diy-nook'
+        appId: 'irl-herb'
       },
 
       // More info: https://quasar.dev/quasar-cli/developing-electron-apps/node-integration

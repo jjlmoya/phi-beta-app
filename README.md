@@ -1,6 +1,5 @@
-# DIY Nook (diy-nook)
+# Calendario de Plantación (irl-herb)
 
-Lista dinámica e interactiva de DIY del juego Animal Crossing New Horizons
 
 ## Install the dependencies
 ```bash

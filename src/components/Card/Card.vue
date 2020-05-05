@@ -4,7 +4,7 @@
             {{ name }}
         </div>
         <img class="card__corner" :src="`${assets}${owned ? 'star-full' : 'star-empty'}.png`" @click="toggleOwned(image)"/>
-        <img class="card__image" :src="`${assets}/assets/${image}`">
+        <img class="card__image" :src="`${assets}/assets/plants/${image}`">
         <div class="card__months">
           <div  v-for="(month, index) in commonMonths" :key="month().id">
             <div class="month__wrap" :class="getMonthState(month().id, index)">

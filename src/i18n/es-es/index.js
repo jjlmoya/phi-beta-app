@@ -3,9 +3,39 @@
 
 export default {
   plants: {
+    azuki: 'Azuki',
     basil: 'Albahaca',
     tomato: 'Tomate',
-    chili: 'Chile'
+    chili: 'Chile',
+    chilis: {
+      habanero: 'Habanero',
+      serrano: 'Serrano',
+      malagueta: 'Malagueta'
+    },
+    chamomile: 'Manzanilla',
+    chamomiles: {},
+    basils: {
+      clavo: 'Albahaca de Clavo',
+      anis: 'Albahaca Anís',
+      small: 'Albahaca Hoja Pequeña',
+      morada: 'Albahaca Morada',
+      tailandesa: 'Albahaca Tailandesa',
+      tulsi: 'Albahaca Tulsi'
+    },
+    mint: 'Menta',
+    saffron: 'Azafrán',
+    oregano: 'Orégano',
+    thyme: 'Tomillo',
+    thymes: {
+      salsero: 'Tomillo Salsero',
+      lemon: 'Tomillo Limón'
+    },
+    cabbage: 'Col',
+    cabbages: {
+      kale: 'Col Kale',
+      bruselas: 'Col de Bruselas'
+    },
+    goji: 'Goji'
   },
   flower: {
     poppy: 'Amapola',
@@ -97,9 +127,6 @@ export default {
       kennebec: 'Patata Kennebec',
       sour: 'Patata Agria'
     }
-  },
-  chili: {
-    habanero: 'Habanero'
   },
   month: {
     jan: 'ENE',
