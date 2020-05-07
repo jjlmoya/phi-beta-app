@@ -4,7 +4,167 @@ import SEASON from '../season.data'
 import TYPE from '../type.data'
 import { i18n } from '../../boot/i18n'
 
+const ALL_YEAR = (TYPE) => {
+  return [
+    MONTHS.JANUARY(TYPE),
+    MONTHS.FEBRUARY(TYPE),
+    MONTHS.MARCH(TYPE),
+    MONTHS.APRIL(TYPE),
+    MONTHS.MAY(TYPE),
+    MONTHS.JUNE(TYPE),
+    MONTHS.JULY(TYPE),
+    MONTHS.AUGUST(TYPE),
+    MONTHS.SEPTEMBER(TYPE),
+    MONTHS.OCTOBER(TYPE),
+    MONTHS.NOVEMBER(TYPE),
+    MONTHS.DECEMBER(TYPE)
+  ]
+}
 export default [
+  {
+    name: i18n.t('plants.chard'),
+    image: 'chard.jpg',
+    height: 1,
+    width: 1,
+    season: SEASON.PERENNE,
+    category: [CATEGORY.PERENNE],
+    months: [
+      MONTHS.APRIL(TYPE.PLANT),
+      MONTHS.MAY(TYPE.PLANT),
+      MONTHS.JUNE(TYPE.PLANT)
+    ],
+    pathname: ''
+  }, {
+    name: i18n.t('plants.artichoke'),
+    image: 'artichoke.jpg',
+    height: 1,
+    width: 1,
+    season: SEASON.ANNUAL,
+    category: [CATEGORY.ANNUAL],
+    months: [
+      MONTHS.MAY(TYPE.PLANT),
+      MONTHS.JUNE(TYPE.PLANT)
+    ],
+    pathname: ''
+  }, {
+    name: i18n.t('plants.celery'),
+    image: 'celery.jpg',
+    height: 1,
+    width: 1,
+    season: SEASON.ANNUAL,
+    category: [CATEGORY.ANNUAL],
+    months: [
+      MONTHS.JANUARY(TYPE.PLANT),
+      MONTHS.FEBRUARY(TYPE.PLANT),
+      MONTHS.MARCH(TYPE.PLANT),
+      MONTHS.APRIL(TYPE.PLANT),
+      MONTHS.MAY(TYPE.PLANT),
+      MONTHS.JUNE(TYPE.PLANT)
+    ],
+    pathname: ''
+  }, {
+    name: i18n.t('plants.broccoli'),
+    image: 'broccoli.jpg',
+    height: 1,
+    width: 1,
+    season: SEASON.ANNUAL,
+    category: [CATEGORY.ANNUAL],
+    months: [
+      MONTHS.MARCH(TYPE.PLANT),
+      MONTHS.APRIL(TYPE.PLANT),
+      MONTHS.MAY(TYPE.PLANT),
+      MONTHS.JUNE(TYPE.PLANT),
+      MONTHS.JULY(TYPE.PLANT),
+      MONTHS.AUGUST(TYPE.PLANT)
+    ],
+    pathname: ''
+  },
+  {
+    name: i18n.t('plants.zucchini'),
+    image: 'zucchini.jpg',
+    height: 1,
+    width: 1,
+    season: SEASON.ANNUAL,
+    category: [CATEGORY.ANNUAL],
+    months: [
+      MONTHS.MARCH(TYPE.PLANT),
+      MONTHS.APRIL(TYPE.PLANT),
+      MONTHS.MAY(TYPE.PLANT)
+    ],
+    pathname: ''
+  },
+  {
+    name: i18n.t('plants.pumpkin'),
+    image: 'pumpkin.jpg',
+    height: 1,
+    width: 1,
+    season: SEASON.ANNUAL,
+    category: [CATEGORY.ANNUAL],
+    months: [
+      MONTHS.MARCH(TYPE.PLANT),
+      MONTHS.APRIL(TYPE.PLANT),
+      MONTHS.MAY(TYPE.PLANT)
+    ],
+    pathname: ''
+  },
+  {
+    name: i18n.t('plants.onion'),
+    image: 'onion.jpg',
+    height: 1,
+    width: 1,
+    season: SEASON.ANNUAL,
+    category: [CATEGORY.ANNUAL],
+    months: [
+      MONTHS.FEBRUARY(TYPE.PLANT),
+      MONTHS.MARCH(TYPE.PLANT),
+      MONTHS.APRIL(TYPE.PLANT),
+      MONTHS.MAY(TYPE.PLANT)
+    ],
+    pathname: ''
+  },
+  {
+    name: i18n.t('plants.eggplant'),
+    image: 'eggplant.jpg',
+    height: 1,
+    width: 1,
+    season: SEASON.ANNUAL,
+    category: [CATEGORY.ANNUAL],
+    months: [
+      MONTHS.JANUARY(TYPE.PLANT),
+      MONTHS.FEBRUARY(TYPE.PLANT),
+      MONTHS.MARCH(TYPE.PLANT),
+      MONTHS.APRIL(TYPE.PLANT)
+    ],
+    pathname: ''
+  },
+  {
+    name: i18n.t('plants.cauliflower'),
+    image: 'cauliflower.jpg',
+    height: 1,
+    width: 1,
+    season: SEASON.ANNUAL,
+    category: [CATEGORY.ANNUAL],
+    months: [
+      MONTHS.JULY(TYPE.PLANT),
+      MONTHS.AUGUST(TYPE.PLANT),
+      MONTHS.SEPTEMBER(TYPE.PLANT)
+    ],
+    pathname: ''
+  },
+  {
+    name: i18n.t('plants.spinach'),
+    image: 'spinach.jpg',
+    height: 1,
+    width: 1,
+    season: SEASON.ANNUAL,
+    category: [CATEGORY.ANNUAL],
+    months: [
+      MONTHS.MAY(TYPE.PLANT),
+      MONTHS.JUNE(TYPE.PLANT),
+      MONTHS.JULY(TYPE.PLANT)
+    ],
+    pathname: ''
+  },
   {
     name: i18n.t('plants.basil'),
     image: 'basil.jpg',
@@ -15,8 +175,7 @@ export default [
     months: [
       MONTHS.MARCH(TYPE.PLANT),
       MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.MAY(TYPE.PLANT),
-      MONTHS.AUGUST(TYPE.FLOWER)
+      MONTHS.FEBRUARY(TYPE.PLANT)
     ],
     pathname: '/albahaca/'
   },
@@ -27,7 +186,12 @@ export default [
     width: 1,
     season: SEASON.ANNUAL,
     category: [CATEGORY.ANNUAL],
-    months: [],
+    months: [
+      MONTHS.JULY(TYPE.PLANT),
+      MONTHS.AUGUST(TYPE.PLANT),
+      MONTHS.NOVEMBER(TYPE.FRUIT),
+      MONTHS.DECEMBER(TYPE.FRUIT)
+    ],
     pathname: '/chili/'
   }, {
     name: i18n.t('plants.basils.clavo'),
@@ -36,7 +200,15 @@ export default [
     width: 1,
     season: SEASON.ANNUAL,
     category: [CATEGORY.ANNUAL],
-    months: [],
+    months: [
+      MONTHS.MAY(TYPE.PLANT),
+      MONTHS.JULY(TYPE.FLOWER),
+      MONTHS.JUNE(TYPE.FRUIT),
+      MONTHS.AUGUST(TYPE.FRUIT),
+      MONTHS.SEPTEMBER(TYPE.FRUIT),
+      MONTHS.OCTOBER(TYPE.FRUIT),
+      MONTHS.NOVEMBER(TYPE.FRUIT)
+    ],
     pathname: '/albahaca/albahaca-de-clavo/'
   },
   {
@@ -46,7 +218,15 @@ export default [
     width: 1,
     season: SEASON.ANNUAL,
     category: [CATEGORY.ANNUAL],
-    months: [],
+    months: [
+      MONTHS.FEBRUARY(TYPE.PLANT),
+      MONTHS.MARCH(TYPE.PLANT),
+      MONTHS.APRIL(TYPE.PLANT),
+      MONTHS.MAY(TYPE.FLOWER),
+      MONTHS.JUNE(TYPE.FRUIT),
+      MONTHS.JULY(TYPE.FRUIT),
+      MONTHS.AUGUST(TYPE.FRUIT)
+    ],
     pathname: '/albahaca/anis/'
   },
   {
@@ -56,7 +236,13 @@ export default [
     width: 1,
     season: SEASON.ANNUAL,
     category: [CATEGORY.ANNUAL],
-    months: [],
+    months: [
+      MONTHS.FEBRUARY(TYPE.PLANT),
+      MONTHS.MARCH(TYPE.PLANT),
+      MONTHS.JULY(TYPE.FLOWER),
+      MONTHS.AUGUST(TYPE.FRUIT),
+      MONTHS.SEPTEMBER(TYPE.FRUIT)
+    ],
     pathname: '/albahaca/hoja-pequena/'
   },
   {
@@ -66,7 +252,10 @@ export default [
     width: 1,
     season: SEASON.ANNUAL,
     category: [CATEGORY.ANNUAL],
-    months: [],
+    months: [
+      MONTHS.FEBRUARY(TYPE.PLANT),
+      MONTHS.JUNE(TYPE.FRUIT)
+    ],
     pathname: '/albahaca/morada/'
   },
   {
@@ -76,7 +265,15 @@ export default [
     width: 1,
     season: SEASON.ANNUAL,
     category: [CATEGORY.ANNUAL],
-    months: [],
+    months: [
+      MONTHS.MAY(TYPE.PLANT),
+      MONTHS.JULY(TYPE.FLOWER),
+      MONTHS.JUNE(TYPE.FRUIT),
+      MONTHS.AUGUST(TYPE.FRUIT),
+      MONTHS.SEPTEMBER(TYPE.FRUIT),
+      MONTHS.OCTOBER(TYPE.FRUIT),
+      MONTHS.NOVEMBER(TYPE.FRUIT)
+    ],
     pathname: '/albahaca/tailandesa/'
   },
   {
@@ -86,7 +283,15 @@ export default [
     width: 1,
     season: SEASON.ANNUAL,
     category: [CATEGORY.ANNUAL],
-    months: [],
+    months: [
+      MONTHS.MAY(TYPE.PLANT),
+      MONTHS.JULY(TYPE.FLOWER),
+      MONTHS.JUNE(TYPE.FRUIT),
+      MONTHS.AUGUST(TYPE.FRUIT),
+      MONTHS.SEPTEMBER(TYPE.FRUIT),
+      MONTHS.OCTOBER(TYPE.FRUIT),
+      MONTHS.NOVEMBER(TYPE.FRUIT)
+    ],
     pathname: '/albahaca/tulsi/'
   },
   {
@@ -96,7 +301,12 @@ export default [
     width: 1,
     season: SEASON.ANNUAL,
     category: [CATEGORY.ANNUAL],
-    months: [],
+    months: [
+      MONTHS.MARCH(TYPE.PLANT),
+      MONTHS.APRIL(TYPE.PLANT),
+      MONTHS.OCTOBER(TYPE.FLOWER),
+      MONTHS.SEPTEMBER(TYPE.FLOWER)
+    ],
     pathname: '/azafran/'
   },
   {
@@ -106,7 +316,14 @@ export default [
     width: 1,
     season: SEASON.ANNUAL,
     category: [CATEGORY.ANNUAL],
-    months: [],
+    months: [
+      MONTHS.APRIL(TYPE.PLANT),
+      MONTHS.MAY(TYPE.PLANT),
+      MONTHS.JUNE(TYPE.PLANT),
+      MONTHS.JULY(TYPE.FRUIT),
+      MONTHS.AUGUST(TYPE.FRUIT),
+      MONTHS.SEPTEMBER(TYPE.FRUIT)
+    ],
     pathname: '/chili/habanero/'
   },
   {
@@ -116,7 +333,14 @@ export default [
     width: 1,
     season: SEASON.ANNUAL,
     category: [CATEGORY.ANNUAL],
-    months: [],
+    months: [
+      MONTHS.APRIL(TYPE.PLANT),
+      MONTHS.MAY(TYPE.PLANT),
+      MONTHS.JUNE(TYPE.PLANT),
+      MONTHS.JULY(TYPE.FRUIT),
+      MONTHS.AUGUST(TYPE.FRUIT),
+      MONTHS.SEPTEMBER(TYPE.FRUIT)
+    ],
     pathname: '/chili/malagueta/'
   },
   {
@@ -126,7 +350,16 @@ export default [
     width: 1,
     season: SEASON.ANNUAL,
     category: [CATEGORY.ANNUAL],
-    months: [],
+    months: [
+      MONTHS.FEBRUARY(TYPE.PLANT),
+      MONTHS.MARCH(TYPE.PLANT),
+      MONTHS.APRIL(TYPE.PLANT),
+      MONTHS.MAY(TYPE.PLANT),
+      MONTHS.JUNE(TYPE.PLANT),
+      MONTHS.JULY(TYPE.FRUIT),
+      MONTHS.AUGUST(TYPE.FRUIT),
+      MONTHS.SEPTEMBER(TYPE.FRUIT)
+    ],
     pathname: '/chili/serrano/'
   },
   {
@@ -136,7 +369,14 @@ export default [
     width: 1,
     season: SEASON.ANNUAL,
     category: [CATEGORY.ANNUAL],
-    months: [],
+    months: [
+      MONTHS.MARCH(TYPE.PLANT),
+      MONTHS.APRIL(TYPE.PLANT),
+      MONTHS.MAY(TYPE.PLANT),
+      MONTHS.JUNE(TYPE.PLANT),
+      MONTHS.JULY(TYPE.PLANT),
+      MONTHS.AUGUST(TYPE.PLANT)
+    ],
     pathname: '/col/'
   },
   {
@@ -146,7 +386,13 @@ export default [
     width: 1,
     season: SEASON.ANNUAL,
     category: [CATEGORY.ANNUAL],
-    months: [],
+    months: [
+      MONTHS.NOVEMBER(TYPE.PLANT),
+      MONTHS.DECEMBER(TYPE.PLANT),
+      MONTHS.JANUARY(TYPE.PLANT),
+      MONTHS.SEPTEMBER(TYPE.FRUIT),
+      MONTHS.OCTOBER(TYPE.FRUIT)
+    ],
     pathname: '/col/bruselas/'
   },
   {
@@ -156,7 +402,12 @@ export default [
     width: 1,
     season: SEASON.ANNUAL,
     category: [CATEGORY.ANNUAL],
-    months: [],
+    months: [
+      MONTHS.SEPTEMBER(TYPE.PLANT),
+      MONTHS.OCTOBER(TYPE.PLANT),
+      MONTHS.APRIL(TYPE.PLANT),
+      MONTHS.MAY(TYPE.PLANT)
+    ],
     pathname: '/col/kale/'
   },
   {
@@ -166,7 +417,12 @@ export default [
     width: 1,
     season: SEASON.ANNUAL,
     category: [CATEGORY.ANNUAL],
-    months: [],
+    months: [
+      MONTHS.MARCH(TYPE.PLANT),
+      MONTHS.APRIL(TYPE.PLANT),
+      MONTHS.SEPTEMBER(TYPE.PLANT),
+      MONTHS.OCTOBER(TYPE.PLANT)
+    ],
     pathname: '/manzanilla/'
   },
   {
@@ -176,7 +432,10 @@ export default [
     width: 1,
     season: SEASON.ANNUAL,
     category: [CATEGORY.ANNUAL],
-    months: [],
+    months: [
+      MONTHS.MARCH(TYPE.PLANT),
+      MONTHS.APRIL(TYPE.PLANT),
+      MONTHS.MAY(TYPE.PLANT)],
     pathname: '/menta/'
   },
   {
@@ -186,7 +445,11 @@ export default [
     width: 1,
     season: SEASON.ANNUAL,
     category: [CATEGORY.ANNUAL],
-    months: [],
+    months: [
+      MONTHS.JANUARY(TYPE.PLANT),
+      MONTHS.FEBRUARY(TYPE.PLANT),
+      MONTHS.MARCH(TYPE.PLANT)
+    ],
     pathname: '/oregano/'
   },
   {
@@ -196,7 +459,7 @@ export default [
     width: 1,
     season: SEASON.ANNUAL,
     category: [CATEGORY.ANNUAL],
-    months: [],
+    months: ALL_YEAR(TYPE.PLANT),
     pathname: '/tomillo/limon/'
   },
   {
@@ -206,7 +469,7 @@ export default [
     width: 1,
     season: SEASON.ANNUAL,
     category: [CATEGORY.ANNUAL],
-    months: [],
+    months: ALL_YEAR(TYPE.PLANT),
     pathname: '/tomillo/salsero/'
   },
   {
@@ -216,7 +479,7 @@ export default [
     width: 1,
     season: SEASON.ANNUAL,
     category: [CATEGORY.ANNUAL],
-    months: [],
+    months: ALL_YEAR(TYPE.PLANT),
     pathname: '/tomillo/'
   },
   {
@@ -224,9 +487,15 @@ export default [
     image: 'azuki.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
-    category: [CATEGORY.ANNUAL],
-    months: [],
+    season: SEASON.PERENNE,
+    category: [CATEGORY.PERENNE],
+    months: [
+      MONTHS.APRIL(TYPE.PLANT),
+      MONTHS.MAY(TYPE.PLANT),
+      MONTHS.JULY(TYPE.FRUIT),
+      MONTHS.AUGUST(TYPE.FRUIT),
+      MONTHS.SEPTEMBER(TYPE.FRUIT)
+    ],
     pathname: '/azuki/'
   },
   {
@@ -234,9 +503,9 @@ export default [
     image: 'goji.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
-    category: [CATEGORY.ANNUAL],
-    months: [],
+    season: SEASON.PERENNE,
+    category: [CATEGORY.PERENNE],
+    months: ALL_YEAR(TYPE.PLANT),
     pathname: '/goji/'
   }
 ]

@@ -1,21 +1,21 @@
-import MONTHS from '../month.data'
+import MONTHS, { HELPER } from '../month.data'
 import CATEGORY from '../category.data'
 import TYPE from '../type.data'
+
 import SEASON from '../season.data'
 import { i18n } from '../../boot/i18n'
+
 export default [
   {
     name: i18n.t('flower.poppy'),
     image: 'poppy.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.AUTUMN(TYPE.PLANT),
+      ...HELPER.SPRING(TYPE.FLOWER)
     ],
     pathname: '/amapola/'
   },
@@ -24,13 +24,12 @@ export default [
     image: 'poppy-adormidera.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      MONTHS.JANUARY(TYPE.PLANT),
+      MONTHS.FEBRUARY(TYPE.PLANT),
+      ...HELPER.SPRING(TYPE.FLOWER)
     ],
     pathname: '/amapola/adormidera'
   },
@@ -39,13 +38,12 @@ export default [
     image: 'poppy-azul.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.AUTUMN(TYPE.PLANT),
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.SUMMER(TYPE.FLOWER)
     ],
     pathname: '/ampola/azul'
   },
@@ -54,13 +52,11 @@ export default [
     image: 'poppy-oriental.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.WINTER(TYPE.PLANT),
+      ...HELPER.SUMMER(TYPE.FLOWER)
     ],
     pathname: '/amapola/oriental/'
   },
@@ -69,13 +65,11 @@ export default [
     image: 'poppy-nudicaule.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.AUTUMN(TYPE.PLANT),
+      ...HELPER.SUMMER(TYPE.FLOWER)
     ],
     pathname: '/amapola/papaver-nudicaule'
   },
@@ -84,13 +78,12 @@ export default [
     image: 'poppy-romneya-coulteri.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.WINTER(TYPE.PLANT),
+      ...HELPER.SPRING(TYPE.FLOWER),
+      ...HELPER.SUMMER(TYPE.FLOWER)
     ],
     pathname: '/amapola/romneya-coulteri'
   },
@@ -99,13 +92,12 @@ export default [
     image: 'cosmos.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/cosmos/'
   },
@@ -114,13 +106,12 @@ export default [
     image: 'cosmos-azufre.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/cosmos/azufre'
   },
@@ -129,13 +120,12 @@ export default [
     image: 'cosmos-chocolate.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/cosmos/chocolate'
   },
@@ -144,13 +134,12 @@ export default [
     image: 'cosmos-sonata.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/cosmos-sonata/'
   },
@@ -159,13 +148,12 @@ export default [
     image: 'sunflower.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.WINTER(TYPE.PLANT),
+      ...HELPER.SPRING(TYPE.FLOWER)
+
     ],
     pathname: '/girasol/'
   },
@@ -174,13 +162,12 @@ export default [
     image: 'hibiscus-abelmoschus-moschatus.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/hibiscus/abelmoschus-moschatus'
   },
@@ -189,13 +176,12 @@ export default [
     image: 'hibiscus-cannabinus.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/hibiscus/cannabinus/'
   },
@@ -204,13 +190,12 @@ export default [
     image: 'hibiscus-coccineus.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/hibiscus/coccineus/'
   },
@@ -219,13 +204,12 @@ export default [
     image: 'hibiscus-moscheutos.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/hibiscus/moscheutos'
   },
@@ -234,13 +218,12 @@ export default [
     image: 'hibiscus-mutabilis.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/hibiscus/mutabilis'
   },
@@ -249,13 +232,12 @@ export default [
     image: 'hibiscus-splendens.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/hibiscus/splendens'
   },
@@ -264,13 +246,12 @@ export default [
     image: 'hibiscus-syriacus.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/hibiscus/syriacus'
   },
@@ -279,13 +260,12 @@ export default [
     image: 'hibiscus-trionum.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/hibiscus/trionum'
   },
@@ -294,13 +274,12 @@ export default [
     image: 'hortensia.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/hortensia/'
   },
@@ -309,13 +288,12 @@ export default [
     image: 'hortensia-arborescens.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/hortensias/arborescens'
   },
@@ -324,13 +302,12 @@ export default [
     image: 'hortensia-paniculata.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/hortensias/paniculata'
   },
@@ -339,13 +316,12 @@ export default [
     image: 'hortensia-quercifolia.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/hortensias/quercifolia'
   },
@@ -354,13 +330,12 @@ export default [
     image: 'hortensia-trepadora.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/hortensias/trepadora'
   },
@@ -369,13 +344,12 @@ export default [
     image: 'lavanda-stoechas.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/lavanda/stoechas/'
   },
@@ -384,13 +358,11 @@ export default [
     image: 'lilies.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SUMMER(TYPE.PLANT),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/lirios/'
   },
@@ -399,13 +371,11 @@ export default [
     image: 'lilies-alstroemeria.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SUMMER(TYPE.PLANT),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/lirios/alstroemeria'
   },
@@ -414,13 +384,11 @@ export default [
     image: 'lilies-asiatico-amarillo.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SUMMER(TYPE.PLANT),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/lirios/asiatico-amarillo'
   },
@@ -429,13 +397,11 @@ export default [
     image: 'lilies-azucena.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SUMMER(TYPE.PLANT),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/lirios/azucena'
   },
@@ -444,13 +410,11 @@ export default [
     image: 'lilies-japones.png',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SUMMER(TYPE.PLANT),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/lirios/japones'
   },
@@ -459,13 +423,11 @@ export default [
     image: 'lilies-journeys-end.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SUMMER(TYPE.PLANT),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/lirios/journeys-end'
   },
@@ -474,13 +436,11 @@ export default [
     image: 'lilies-martagon.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SUMMER(TYPE.PLANT),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/lirios/mortagon'
   },
@@ -489,13 +449,11 @@ export default [
     image: 'lilies-paz.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SUMMER(TYPE.PLANT),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/lirios/paz'
   },
@@ -504,28 +462,26 @@ export default [
     image: 'lilies-stargazer.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SUMMER(TYPE.PLANT),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
-    pathname: '/lirios/stargazerr'
+    pathname: '/lirios/stargazer'
   },
   {
     name: i18n.t('flower.margarita'),
     image: 'margarita.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.WINTER(TYPE.PLANT),
+      ...HELPER.SPRING(TYPE.FLOWER),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/margarita/'
   },
@@ -534,13 +490,12 @@ export default [
     image: 'lavandula.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.WINTER(TYPE.PLANT),
+      ...HELPER.SPRING(TYPE.FLOWER),
+      ...HELPER.SUMMER(TYPE.FLOWER)
     ],
     pathname: '/lavanda/'
   },
@@ -549,13 +504,13 @@ export default [
     image: 'margarita-felicia-amelloides.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.WINTER(TYPE.PLANT),
+      ...HELPER.SPRING(TYPE.FLOWER),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/margarita/felicia-amelloides'
   },
@@ -564,13 +519,13 @@ export default [
     image: 'margarita-gerbera.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.WINTER(TYPE.PLANT),
+      ...HELPER.SPRING(TYPE.FLOWER),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/margarita/gerbera'
   },
@@ -579,13 +534,13 @@ export default [
     image: 'margarita-gigante.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.WINTER(TYPE.PLANT),
+      ...HELPER.SPRING(TYPE.FLOWER),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/margarita/gigante'
   },
@@ -594,13 +549,13 @@ export default [
     image: 'margarita-magarza.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.WINTER(TYPE.PLANT),
+      ...HELPER.SPRING(TYPE.FLOWER),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/magarita/magarza'
   },
@@ -609,7 +564,7 @@ export default [
     image: 'narciso.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
       MONTHS.MARCH(TYPE.PLANT),
@@ -624,28 +579,28 @@ export default [
     image: 'orchid-vainilla.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.WINTER(TYPE.FLOWER),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
-    pathname: '/orquidea/'
+    pathname: '/orquidea/vainilla'
   },
   {
     name: i18n.t('flower.orchids.vanda'),
     image: 'orchid-vanda.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.WINTER(TYPE.PLANT),
+      ...HELPER.SUMMER(TYPE.PLANT),
+      ...HELPER.AUTUMN(TYPE.PLANT)
     ],
     pathname: '/orquidea/vanda'
   },
@@ -654,13 +609,13 @@ export default [
     image: 'rose.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.WINTER(TYPE.FLOWER),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/rosa/'
   },
@@ -669,13 +624,13 @@ export default [
     image: 'rose-alba.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.WINTER(TYPE.FLOWER),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/tomate/'
   },
@@ -684,13 +639,13 @@ export default [
     image: 'rose-centifolia.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.WINTER(TYPE.FLOWER),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/rosa/centifolia'
   },
@@ -699,13 +654,13 @@ export default [
     image: 'rose-damascena.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.WINTER(TYPE.FLOWER),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/rosa/damascena'
   },
@@ -714,13 +669,13 @@ export default [
     image: 'rose-gallica.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.WINTER(TYPE.FLOWER),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/rosa/gallica'
   },
@@ -729,13 +684,13 @@ export default [
     image: 'rose-iceberg.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.WINTER(TYPE.FLOWER),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/rosa/iceberg'
   },
@@ -744,13 +699,13 @@ export default [
     image: 'rose-lolita-lempicka.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.WINTER(TYPE.FLOWER),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/rosa/lolita-lempicka'
   },
@@ -759,13 +714,13 @@ export default [
     image: 'rose-pimpinellifolia.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.WINTER(TYPE.FLOWER),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/rosa/pimpinellifolia'
   },
@@ -774,13 +729,13 @@ export default [
     image: 'rose-pitimini.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.WINTER(TYPE.FLOWER),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/rosa/pitimini'
   },
@@ -789,13 +744,13 @@ export default [
     image: 'rose-polyantha.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.WINTER(TYPE.FLOWER),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/rosa/polyantha'
   },
@@ -804,13 +759,13 @@ export default [
     image: 'rose-princesa-de-monaco.png',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.WINTER(TYPE.FLOWER),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/rosa/princesa-de-monaco'
   },
@@ -819,13 +774,13 @@ export default [
     image: 'rose-rugosa.png',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.SPRING(TYPE.PLANT),
+      ...HELPER.WINTER(TYPE.FLOWER),
+      ...HELPER.SUMMER(TYPE.FLOWER),
+      ...HELPER.AUTUMN(TYPE.FLOWER)
     ],
     pathname: '/rosa/rugosa'
   },
@@ -834,13 +789,12 @@ export default [
     image: 'tulip.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.AUTUMN(TYPE.PLANT),
+      ...HELPER.SPRING(TYPE.FLOWER),
+      ...HELPER.SUMMER(TYPE.FLOWER)
     ],
     pathname: '/tulipan/'
   },
@@ -849,13 +803,12 @@ export default [
     image: 'tulip-ballerina.png',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.AUTUMN(TYPE.PLANT),
+      ...HELPER.SPRING(TYPE.FLOWER),
+      ...HELPER.SUMMER(TYPE.FLOWER)
     ],
     pathname: '/tulipan/ballerina'
   },
@@ -864,13 +817,12 @@ export default [
     image: 'tulips-reina-de-la-noche.jpg',
     height: 1,
     width: 1,
-    season: SEASON.ANNUAL,
+    season: SEASON.PERENNE,
     category: [CATEGORY.FLOWER],
     months: [
-      MONTHS.MARCH(TYPE.PLANT),
-      MONTHS.APRIL(TYPE.PLANT),
-      MONTHS.JUNE(TYPE.FLOWER),
-      MONTHS.AUGUST(TYPE.FRUIT)
+      ...HELPER.AUTUMN(TYPE.PLANT),
+      ...HELPER.SPRING(TYPE.FLOWER),
+      ...HELPER.SUMMER(TYPE.FLOWER)
     ],
     pathname: '/tulipan/reina-de-la-noche'
   }

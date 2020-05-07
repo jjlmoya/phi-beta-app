@@ -141,6 +141,10 @@
     animation: fade-in-animation 1s;
     animation-delay: 0.3s;
     opacity: 0.3;
-    order: 2
+    order: 2;
+    display: block;
+  }
+  .is-owned {
+    display:none;
   }
 }

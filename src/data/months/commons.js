@@ -1,5 +1,6 @@
 import { i18n } from '../../boot/i18n'
-export default {
+
+const MONTHS = {
   JANUARY: (TYPE) => {
     return {
       id: 'JAN',
@@ -96,4 +97,39 @@ export default {
       ...TYPE
     }
   }
+}
+
+export const HELPER = {
+  SPRING: (type) => {
+    return [
+      MONTHS.MARCH(type),
+      MONTHS.APRIL(type),
+      MONTHS.MAY(type)
+    ]
+  },
+  AUTUMN: (type) => {
+    return [
+      MONTHS.SEPTEMBER(type),
+      MONTHS.OCTOBER(type),
+      MONTHS.NOVEMBER(type)
+    ]
+  },
+  SUMMER: (type) => {
+    return [
+      MONTHS.JUNE(type),
+      MONTHS.JULY(type),
+      MONTHS.AUGUST(type)
+    ]
+  },
+  WINTER: (type) => {
+    return [
+      MONTHS.DECEMBER(type),
+      MONTHS.JANUARY(type),
+      MONTHS.FEBRUARY(type)
+    ]
+  }
+}
+
+export default {
+  ...MONTHS
 }
