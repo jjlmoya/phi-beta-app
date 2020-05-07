@@ -64,7 +64,7 @@ export default {
       current: crafting.current,
       owneds: crafting.owneds,
       category: this.$route.query.category,
-      limit: 99,
+      limit: 300,
       search: ''
     }
   },

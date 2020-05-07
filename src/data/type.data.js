@@ -1,11 +1,14 @@
 export default {
   PLANT: {
-    type: 'plant'
+    type: 'plant',
+    image: './statics/assets/seed.png'
   },
   FLOWER: {
-    type: 'flower'
+    type: 'flower',
+    image: './statics/assets/flower.png'
   },
   FRUIT: {
-    type: 'fruit'
+    type: 'fruit',
+    image: './statics/assets/fruit.png'
   }
 }
