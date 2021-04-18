@@ -1,9 +1,8 @@
-# scaffolder-vue3-vite-capacitor
+# Phi Beta App
 
-Just git clone and enjoy Capacitor 3.0.0, Vue 3 and Vite. Make awesome Apps 
 
 ```bash
-git clone https://github.com/jjlmoya/scaffolder-vue3-vite-capacitor.git
+git clone https://github.com/jjlmoya/phi-beta-app.git
 ```
 
 
