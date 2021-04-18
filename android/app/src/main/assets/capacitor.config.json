@@ -1,0 +1,8 @@
+{
+	"appId": "com.phibeta.app",
+	"appName": "Core",
+	"bundledWebRuntime": false,
+	"npmClient": "vite",
+	"webDir": "dist",
+	"cordova": {}
+}

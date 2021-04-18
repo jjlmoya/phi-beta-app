@@ -1,5 +1,5 @@
 {
-  "appId": "com.core.app",
+  "appId": "com.phibeta.app",
   "appName": "Core",
   "bundledWebRuntime": false,
   "npmClient": "vite",

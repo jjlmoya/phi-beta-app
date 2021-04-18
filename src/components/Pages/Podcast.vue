@@ -61,8 +61,8 @@
             const channel = getChannels()
                 .find((c)=> c.id === route.params.id)
 
-            const openVideo = (video) => {
-                Browser.open(`https://www.youtube.com/watch?v=${video}`)
+            const openVideo = async (video) => {
+                await Browser.open({url: `http://www.youtube.com/watch?v=${video}`})
             }
             const isFav = (id) => {
                 return favs.value.includes(id)

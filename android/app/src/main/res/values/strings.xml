@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Phi Beta App</string>
+    <string name="title_activity_main">Phi Beta App</string>
+    <string name="package_name">com.phibeta.app</string>
+    <string name="custom_url_scheme">com.phibeta.app</string>
+</resources>
