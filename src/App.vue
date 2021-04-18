@@ -1,11 +1,13 @@
 <template>
-  <div id="q-app">
-    <router-view />
-  </div>
+    <Router />
 </template>
+ 
+<script>
+    import Router from '@/views/Router.vue'
 
-<script >
-export default {
-  name: 'App'
-}
+    export default {
+        components: {  
+            Router
+        }
+    }
 </script>

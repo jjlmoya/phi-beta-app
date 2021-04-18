@@ -1,25 +1,24 @@
-# Calendario de Plantación (irl-herb)
+# scaffolder-vue3-vite-capacitor
 
+Just git clone and enjoy Capacitor 3.0.0, Vue 3 and Vite. Make awesome Apps 
 
-## Install the dependencies
 ```bash
-npm install
+git clone https://github.com/jjlmoya/scaffolder-vue3-vite-capacitor.git
 ```
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
+
+## dev:
 ```bash
-quasar dev
+npm run dev
 ```
 
-### Lint the files
+## add platforms:
 ```bash
-npm run lint
+npm run platforms
 ```
 
-### Build the app for production
+## Sync App
 ```bash
-quasar build
+npm run apps
 ```
 
-### Customize the configuration
-See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
