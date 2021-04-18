@@ -1,16 +1,17 @@
 {
-  "name": "core",
-  "version": "0.0.0",
+  "name": "phi-beta-app",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
     "a": "eslint ./",
-    "platforms": "npx cap add ios && npx cap add android",
+    "platforms": "vite build && npx cap add ios && npx cap add android",
     "app": "vite build && npx cap copy && npx cap sync"
   },
   "dependencies": {
     "@capacitor/android": "^3.0.0-rc.0",
+    "@capacitor/browser": "^0.4.6",
     "@capacitor/cli": "^3.0.0-rc.0",
     "@capacitor/core": "^3.0.0-rc.0",
     "@capacitor/ios": "^3.0.0-rc.0",

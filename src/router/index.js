@@ -5,6 +5,11 @@ const routes = [
         path: '/',
         name: 'home',
         component: () => import('@/views/Home.vue')
+    },
+    {
+        path: '/podcast/:id',
+        name: 'podcast',
+        component: () => import('@/views/Podcast.vue')
     }
 ]
 

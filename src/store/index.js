@@ -1,8 +1,10 @@
 import { createStore } from 'vuex'
 import createPersistedState from 'vuex-persistedstate'
+import channels from '@/store/modules/channels'
+
 
 const persistedStates = createPersistedState({
-    paths: []
+    paths: ['channels']
 })
 
 export default createStore({
@@ -14,6 +16,7 @@ export default createStore({
     actions: {
     },
     modules: {
+        channels
     },
     plugins: [persistedStates]
 })

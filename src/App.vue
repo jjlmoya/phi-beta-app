@@ -1,12 +1,12 @@
 <template>
     <Router />
 </template>
- 
+
 <script>
     import Router from '@/views/Router.vue'
 
     export default {
-        components: {  
+        components: {
             Router
         }
     }
