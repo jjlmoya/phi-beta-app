@@ -31,7 +31,7 @@
     "postcss-nested": "^5.0.5",
     "postcss-preset-env": "^6.7.0",
     "standard": "^16.0.3",
-    "stylelint": "^13.12.0",
+    "stylelint": "^15.10.1",
     "stylelint-config-standard": "^21.0.0",
     "vite": "^2.1.5"
   },
